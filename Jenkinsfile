@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment{
-        TOMCAT_HOME = "/home/marcin/tools/apache-tomcat-8.5.23"
-        TOMCAT_HOST="172.17.0.1"
-        CONN = "marcin@${TOMCAT_HOST}"
+        TOMCAT_HOME = "/opt/tomcat/apache-tomcat-8.5.49"
+        TOMCAT_HOST="localhost"
+        CONN = "houcem@${TOMCAT_HOST}"
     }
     tools {
-        maven 'mvn_3.5'
-        jdk 'JDK1.8'
+        maven 'MAVEN 3.6'
+        jdk 'JAVA_HOME'
     }
     stages{
         stage ('Initialize') {
